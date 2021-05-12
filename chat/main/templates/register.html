@@ -1,0 +1,13 @@
+{%extends 'layout.html'%}
+{%load static%}
+{%block title%}<title>Home</title>{%endblock%}
+
+{%block content%}
+        <form class="userRegForm" method="POST">
+            {%csrf_token%}
+            <div>
+                {{form.as_p}}
+            </div>
+            <button type="submit">Регистрироватся</button>
+        </form>
+{%endblock%}

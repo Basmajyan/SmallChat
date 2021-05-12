@@ -1,0 +1,27 @@
+{%extends 'layout.html'%}
+{%load static%}
+{%block title%}<title>Главная</title>{%endblock%}
+
+{%block content%}
+<div class="channels">
+    {%if not request.user.is_authenticated%}
+        <h3 class="DoNotReg">Регисрируйтесь или войдите чтобы создат комнату</h3>
+    {%else%}
+        {%for j in rooms%}
+            <a class="rommButton" href="{{j.name}}">{{j.name}}</a><br><br><br>
+        {%endfor%}   
+    {%endif%}
+</div>
+    {%if not request.user.is_authenticated%}
+        <h3 class="DoNotReg">Регисрируйтесь или войдите чтобы создат комнату</h3>
+    {%else%}
+        <form class="userRegForm" method="POST" action="checkview">
+            {% csrf_token %}
+            <p style="text-align: center;">Имя комнаты</p>
+            <input style="margin-left:40.5%;" type="text" name="room_name" id="room_name" width="100px" />
+            <br><br>
+            <button type="submit">Создать/подключится</button>
+        </form>
+    {%endif%}
+
+{%endblock%}

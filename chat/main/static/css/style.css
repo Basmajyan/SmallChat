@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.channels{
+    position: absolute;
+    width: 10vw;
+    min-height: 100vh;  
+    top: 0;
+    left: 0;
+    background-color: rgb(224, 224, 224);
+    padding-top: 70px;
+}
+.manu{
+    position: fixed;
+    background-color: rgb(192, 192, 192);
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+}
+.LogRegText div{
+    margin: 0px 100px;
+}
+.LogRegText{
+    position: fixed;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+
+}
+.userRegForm{
+    width: 50%;
+    min-height: 500px;
+    border: 1px solid red;
+    margin: auto;
+    margin-top: 150px;
+}
+.messages{
+    position: fixed;
+    margin-left: 45vw;
+    margin-top: -100px;
+    background-color: rgba(209, 99, 99, 0.39);
+}
+.userRegForm button{
+    display: block;
+    margin: auto;
+}
+.userRegForm div{
+    width: 65%;
+}
+.userRegForm p{
+    text-align: right;
+}
+.mess{
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 18px;
+  margin: 10px 0;
+  width: 50%;
+  margin-left:3%;
+  
+}
+.Usermess{
+  border: 2px solid #dedede;
+  background-color: #e5e3ff;
+  border-radius: 5px;
+  padding: 18px;
+  margin: 10px 0;
+  width: 50%;
+  margin-left: 45%;
+  
+}
+.usermessage {
+  text-align: right;
+}
+.container {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+  #message{
+    width: 90%;
+    height: 50px;
+    margin-left: 10px;
+  }
+  .sender{
+    width: 5%;
+    height: 50px;
+    text-align: center;
+  }
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+
+  .time-left {
+    float: left;
+    color: #999;
+  }
+
+  .room{
+      width: 100%;
+      margin-top: 70px;
+  }
+  #display{      
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 85vh;
+    width: 100%;
+  }
+  .DoNotReg{
+    margin-top: 200px;
+    text-align: center;
+  }
+  .rommButton{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  

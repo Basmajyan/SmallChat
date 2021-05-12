@@ -1,0 +1,31 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'иконка_которая_на_вкладкеico.ico' %}" type="image/x-icon">
+    {%block title%}
+    {%endblock%}
+</head>
+
+<body>
+    <div class="manu">
+        <div class="LogRegText">
+            <div>
+                <h3><a href="/">Главная</a></h3>
+            </div>
+            <div>
+                {%if not request.user.is_authenticated%}
+                    <h3><a href="/login">Войти</a> | <a href="/register">Регистрация</a></h3>
+                {%else%}
+                    <h3><a>{{user.username}}</a> | <a href="/logout">Выйти</a></h3>
+                {%endif%}
+            </div>
+        </div>
+    </div>
+    {%block content%}
+    {%endblock%}
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{%extends 'layout.html'%}
+{%load static%}
+{%block title%}<title>Home</title>{%endblock%}
+    <div class="messages">
+        {%if form.non_field_errors%}
+            <div class="regerros"><p class="nonerrors">{{form.non_field_errors }}</p></div>
+        {%endif%}
+    </div>
+{%block content%}
+        <form class="userRegForm" method="POST">
+            {%csrf_token%}
+            <div>
+                {{form.as_p}}
+            </div>
+            <button type="submit">Войти</button>
+        </form>
+{%endblock%}
